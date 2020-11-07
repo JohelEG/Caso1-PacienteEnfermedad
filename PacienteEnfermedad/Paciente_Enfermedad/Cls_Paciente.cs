@@ -83,7 +83,7 @@ namespace Paciente_Enfermedad
         public new void Consultar()
         {
 
-            foreach (Cls_Paciente paciente in cls_Pacientes)
+            foreach (Cls_Paciente paciente in cls_Pacientes.OrderBy(x=>x.NombreCompleto()))
             {
                 Console.WriteLine($"El paciente es {paciente.NombreCompleto()}, con una edad {paciente.Edad}, con residencia en {paciente.DireccionDelDomicilio} su numero es {paciente.NumeroDeTelefono}; posee las siguientes enfermedades: ");
 
@@ -116,7 +116,7 @@ namespace Paciente_Enfermedad
                 cls_Pacientes[1].cls_Enfermedads[0].cls_Sintomas.Add(new Cls_Sintoma(1, "Fiebre Alta", "......"));
                 cls_Pacientes[1].cls_Enfermedads[0].cls_Sintomas.Add(new Cls_Sintoma(2, "Diarrea", "......"));
 
-                cls_Pacientes.Add(new Cls_Paciente(2, "45668", "Steve", "SIB", "MARCHE", 15, "M", "A+", "+5067777", "Cartago", new List<Cls_Enfermedad>()));
+                cls_Pacientes.Add(new Cls_Paciente(2, "45668", "Arman", "SIB", "MARCHE", 15, "M", "A+", "+5067777", "Cartago", new List<Cls_Enfermedad>()));
                 cls_Pacientes[2].cls_Enfermedads.Add(new Cls_Enfermedad(0, "Acne", "Cutanea", new List<Cls_Sintoma>()));
                 cls_Pacientes[2].cls_Enfermedads[0].cls_Sintomas.Add(new Cls_Sintoma(0, "Espinillas", "......"));
 
